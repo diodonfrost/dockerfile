@@ -14,7 +14,7 @@ pip install pyvmomi; \
 pip install python-openstackclient python-neutronclient python-heatclient
 
 # Ansible
-RUN git clone git://github.com/ansible/ansible.git
+RUN git clone https://github.com/ansible/ansible.git
 WORKDIR ansible
 RUN make rpm; \
 yum install rpm-build/ansible-*.noarch.rpm -y

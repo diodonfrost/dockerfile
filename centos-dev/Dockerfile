@@ -21,6 +21,6 @@ yum install rpm-build/ansible-*.noarch.rpm -y; \
 yum install -y https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 
 # Install puppet-agent
-yum install puppet-agent -y; \
+RUN yum install puppet-agent -y; \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 

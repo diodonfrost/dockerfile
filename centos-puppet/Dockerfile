@@ -25,9 +25,8 @@ ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
 RUN /bin/bash -l -c "rvm requirements run"
 RUN /bin/bash -l -c "rvm install 2.2.5"
 RUN /bin/bash -l -c "rvm use 2.2.5 --default"
-RUN /bin/bash -l -c "gem install beaker bundle rake --no-ri --no-rdoc"
-
+RUN /bin/bash -l -c "gem install beaker bolt bundle rake puppetlabs_spec_helper puppet-lint metadata-json-lint --no-ri --no-rdoc"
+RUN /bin/bash -l -c "gem install puppet facter rspec-puppet rubocop librarian-puppet --no-ri --no-rdoc"
 # Anexe
 RUN mkdir /tmp/share; \
 updatedb
-
